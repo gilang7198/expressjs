@@ -1,56 +1,115 @@
-extends ../layout/base 
-block content 
-	section.content-header 
-		h1 
-			| Blank Page
-			small it all starts here
-		ol.breadcrumb 
-			li 
-				a(href='#') 
-					i.fa.fa-dashboard
-					| Level 
-			li.active Here 
-	section.content
-		.box
-			.box-header.with-border
-				h3.box-title
-					| Customer
-				.box-tools.pull-right
-					button(type='button', data-widget='collapse', data-toggle='tooltip',title='collapse').btn.btn-box-tool
-						i.fa.fa-minus
+//- extends ../layout/base 
+//- block content
+//- 	section.content-header 
+//- 		h1 
+//- 			| Blank Page
+//- 			small it all starts here
+//- 		ol.breadcrumb 
+//- 			li 
+//- 				a(href='#') 
+//- 					i.fa.fa-dashboard
+//- 					| Level 
+//- 			li.active Here 
+//- 	section.content
+//- 		.box
+//- 			.box-header.with-border
+//- 				h3.box-title
+//- 					| Customer
+//- 				.box-tools.pull-right
+//- 					button(type='button', data-widget='collapse', data-toggle='tooltip',title='collapse').btn.btn-box-tool
+//- 						i.fa.fa-minus
 					
-			.box-body
-				form(role='form',method='post' action='/customers/add')
-					.row
+//- 			.box-body
+//- 				form(role='form',method='post' action='/customers/add')
+//- 					.row
 						
-						.col-xs-6
-							.box-body
-								- if (messages.msg_error) 
-									.alert.alert-danger.alert-dismissable 
-										button.close(type='button', data-dismiss='alert', aria-hidden='true') 
-											| ×
-										h4
-											i.icon.fa.fa-ban
-											| Alert! 
-										| !{messages.msg_error}
-								.form-group
-									label
-										| Name
-									input(type='text',value='#{name}',name='name',placeholder='Enter Name', autofocus).form-control
-								.form-group
-									label
-										| Address
-									input(type='text',name='address',placeholder='Enter address').form-control
-								.form-group
-									label
-										| Email
-									input(type='text',value='#{email}',name='email',placeholder='Enter Address').form-control
-								.form-group
-									label
-										| Phone
-									input(type='text',name='phone',placeholder='Enter Phone').form-control
-							.box-footer
-								button(type='submit').btn.btn-primary
-									| Submit
-								a(href='/customers').btn.btn-primary.pull-right
-									| Back
+//- 						.col-xs-6
+//- 							.box-body
+//- 								- if (messages.msg_error) 
+//- 									.alert.alert-danger.alert-dismissable 
+//- 										button.close(type='button', data-dismiss='alert', aria-hidden='true') 
+//- 											| ×
+//- 										h4
+//- 											i.icon.fa.fa-ban
+//- 											| Alert! 
+//- 										| !{messages.msg_error}
+//- 								.form-group
+//- 									label
+//- 										| Name
+//- 									input(type='text',value='#{name}',name='name',placeholder='Enter Name', autofocus).form-control
+//- 								.form-group
+//- 									label
+//- 										| Address
+//- 									input(type='text',name='address',placeholder='Enter address').form-control
+//- 								.form-group
+//- 									label
+//- 										| Email
+//- 									input(type='text',value='#{email}',name='email',placeholder='Enter Address').form-control
+//- 								.form-group
+//- 									label
+//- 										| Phone
+//- 									input(type='text',name='phone',placeholder='Enter Phone').form-control
+//- 							.box-footer
+//- 								button(type='submit').btn.btn-primary
+//- 									| Submit
+//- 								a(href='/customers').btn.btn-primary.pull-right
+//- 									| Back
+
+extends ../layout/base
+block content
+	section.content
+		.container-fluid
+			.row.clearfix
+				.col-lg-12.col-md-12.col-sm-12.col-xs-12
+					.card
+						.header
+							h2 HORIZONTAL LAYOUT
+							ul.header-dropdown.m-r--5
+								li.dropdown
+									a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+										i.material-icons more_vert
+									ul.dropdown-menu.pull-right
+										li
+											a(href='javascript:void(0);') Action
+										li
+											a(href='javascript:void(0);') Another action
+										li
+											a(href='javascript:void(0);') Something else here
+						.body
+							form.form-horizontal(role='form',method='post', action='/customers/add')
+								if (messages.msg_error)  
+									!{messages.msg_error}
+								.row.clearfix
+									.col-lg-2.col-md-2.col-sm-4.col-xs-5.form-control-label
+										label(for='name') Name
+									.col-lg-10.col-md-10.col-sm-8.col-xs-7
+										.form-group
+											.form-line
+												input.form-control(type='text', name='name',id='name', value='#{name}', placeholder='Enter your full name')
+								.row.clearfix
+									.col-lg-2.col-md-2.col-sm-4.col-xs-5.form-control-label
+										label(for='address') Address
+									.col-lg-10.col-md-10.col-sm-8.col-xs-7
+										.form-group
+											.form-line
+												input.form-control(type='text',id='address',name='address', placeholder='Enter your full address')
+								.row.clearfix
+									.col-lg-2.col-md-2.col-sm-4.col-xs-5.form-control-label
+										label(for='email') Email
+									.col-lg-10.col-md-10.col-sm-8.col-xs-7
+										.form-group
+											.form-line
+												input.form-control(type='text',name='email', id='email', value='#{email}', placeholder='Enter your email')
+								.row.clearfix
+									.col-lg-2.col-md-2.col-sm-4.col-xs-5.form-control-label
+										label(for='phone') Phone
+									.col-lg-10.col-md-10.col-sm-8.col-xs-7
+										.form-group
+											.form-line
+												input.form-control(type='text',id='phone', name='phone', placeholder='Enter your phone number')
+								.row.clearfix
+									.col-lg-offset-2.col-md-offset-2.col-sm-offset-4.col-xs-offset-5
+										button.btn.btn-primary.m-t-15.waves-effect(type='submit') Submit
+										a(href='/cutomers')
+											button.btn.btn-primary.m-t-15.waves-effect(type='button') Back
+			// #END# Horizontal Layout
