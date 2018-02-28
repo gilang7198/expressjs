@@ -1,0 +1,511 @@
+//- aside.main-sidebar
+//- 	section.sidebar
+//- 		.user-panel
+//- 			.pull-left.image
+//- 				img(src='/adminlte/dist/img/user2-160x160.jpg',alt='User Image').img-circle
+//- 			.pull-left.info
+//- 				p Alexander Pierces
+//- 				a(href='#')
+//- 					i.fa.fa-circle.text-success 
+//- 					| Online
+//- 		form(action='#',method='get').sidebar-form
+//- 			.input-group
+//- 				input(type='text', name='q',placeholder='Search...').form-control
+//- 				span.input-group-btn
+//- 						button(type='submit', name='search')#search-btn.btn.btn-flat
+//- 							i.fa-fa-search
+//- 		ul.sidebar-menu
+//- 			li.header
+//- 				| Main Navigation
+//- 			li.treeview
+//- 				a(href='#')
+//- 					i.fa.fa-dashboard
+//- 					span
+//- 						| Dashboard
+//- 					span.pull-right-container
+//- 						i.fa.fa-angle-left.pull-right
+//- 				ul.treeview-menu
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Dashboard V1
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Dashboard V2
+//- 			li.treeview
+//- 				a(href='#')
+//- 					i.fa.fa-files-o
+//- 					span
+//- 						| Layout Options
+//- 					span.pull-right-container
+//- 						span.label.label-primary.pull-right
+//- 							| 4
+//- 				ul.treeview-menu
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Top Navigation
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Boxed
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Fixed
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Collapsed Sidebar
+//- 			li
+//- 				a(href='#')
+//- 					i.fa.fa-th
+//- 					span
+//- 						| Widgets
+//- 					span.pull-right-container
+//- 						small.label.pull-right.bg-green
+//- 							| Hot
+//- 			li.treeview
+//- 				a(href='#')
+//- 					i.fa.fa-pie-chart
+//- 					span
+//- 						| Chart
+//- 					span.pull-right-container
+//- 						i.fa.fa-angle-left.pull-right
+//- 				ul.treeview-menu
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| ChartJs
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Morris
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Flot
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| ChartJs
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Inline charts
+//- 			li.treeview
+//- 				a(href='#')
+//- 					i.fa.fa-laptop
+//- 					span
+//- 						| UI Elements
+//- 					span.pull-right-container
+//- 						i.fa.fa-angle-left.pull-right
+//- 				ul.treeview-menu
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| General
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Icons
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Buttons
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Sliders
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Timeline
+//- 					li
+//- 						a(href='#')
+//- 							i.fa.fa-circle-o
+//- 							| Modals
+
+
+section
+	// Left Sidebar
+	aside#leftsidebar.sidebar
+		// User Info
+		.user-info
+			.image
+				img(src='images/user.png', width='48', height='48', alt='User')
+			.info-container
+				.name(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') John Doe
+				.email john.doe@example.com
+				.btn-group.user-helper-dropdown
+					i.material-icons(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') keyboard_arrow_down
+					ul.dropdown-menu.pull-right
+						li
+							a(href='javascript:void(0);')
+								i.material-icons person
+								| Profile
+						li.divider(role='seperator')
+						li
+							a(href='javascript:void(0);')
+								i.material-icons group
+								| Followers
+						li
+							a(href='javascript:void(0);')
+								i.material-icons shopping_cart
+								| Sales
+						li
+							a(href='javascript:void(0);')
+								i.material-icons favorite
+								| Likes
+						li.divider(role='seperator')
+						li
+							a(href='javascript:void(0);')
+								i.material-icons input
+								| Sign Out
+		// #User Info
+		// Menu
+		.menu
+			ul.list
+				li.header MAIN NAVIGATION
+				li.active
+					a(href='index.html')
+						i.material-icons home
+						span Home
+				li
+					a(href='pages/typography.html')
+						i.material-icons text_fields
+						span Typography
+				li
+					a(href='pages/helper-classes.html')
+						i.material-icons layers
+						span Helper Classes
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons widgets
+						span Widgets
+					ul.ml-menu
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								span Cards
+							ul.ml-menu
+								li
+									a(href='pages/widgets/cards/basic.html') Basic
+								li
+									a(href='pages/widgets/cards/colored.html') Colored
+								li
+									a(href='pages/widgets/cards/no-header.html') No Header
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								span Infobox
+							ul.ml-menu
+								li
+									a(href='pages/widgets/infobox/infobox-1.html') Infobox-1
+								li
+									a(href='pages/widgets/infobox/infobox-2.html') Infobox-2
+								li
+									a(href='pages/widgets/infobox/infobox-3.html') Infobox-3
+								li
+									a(href='pages/widgets/infobox/infobox-4.html') Infobox-4
+								li
+									a(href='pages/widgets/infobox/infobox-5.html') Infobox-5
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons swap_calls
+						span User Interface (UI)
+					ul.ml-menu
+						li
+							a(href='pages/ui/alerts.html') Alerts
+						li
+							a(href='pages/ui/animations.html') Animations
+						li
+							a(href='pages/ui/badges.html') Badges
+						li
+							a(href='pages/ui/breadcrumbs.html') Breadcrumbs
+						li
+							a(href='pages/ui/buttons.html') Buttons
+						li
+							a(href='pages/ui/collapse.html') Collapse
+						li
+							a(href='pages/ui/colors.html') Colors
+						li
+							a(href='pages/ui/dialogs.html') Dialogs
+						li
+							a(href='pages/ui/icons.html') Icons
+						li
+							a(href='pages/ui/labels.html') Labels
+						li
+							a(href='pages/ui/list-group.html') List Group
+						li
+							a(href='pages/ui/media-object.html') Media Object
+						li
+							a(href='pages/ui/modals.html') Modals
+						li
+							a(href='pages/ui/notifications.html') Notifications
+						li
+							a(href='pages/ui/pagination.html') Pagination
+						li
+							a(href='pages/ui/preloaders.html') Preloaders
+						li
+							a(href='pages/ui/progressbars.html') Progress Bars
+						li
+							a(href='pages/ui/range-sliders.html') Range Sliders
+						li
+							a(href='pages/ui/sortable-nestable.html') Sortable & Nestable
+						li
+							a(href='pages/ui/tabs.html') Tabs
+						li
+							a(href='pages/ui/thumbnails.html') Thumbnails
+						li
+							a(href='pages/ui/tooltips-popovers.html') Tooltips & Popovers
+						li
+							a(href='pages/ui/waves.html') Waves
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons assignment
+						span Forms
+					ul.ml-menu
+						li
+							a(href='pages/forms/basic-form-elements.html') Basic Form Elements
+						li
+							a(href='pages/forms/advanced-form-elements.html') Advanced Form Elements
+						li
+							a(href='pages/forms/form-examples.html') Form Examples
+						li
+							a(href='pages/forms/form-validation.html') Form Validation
+						li
+							a(href='pages/forms/form-wizard.html') Form Wizard
+						li
+							a(href='pages/forms/editors.html') Editors
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons view_list
+						span Tables
+					ul.ml-menu
+						li
+							a(href='pages/tables/normal-tables.html') Normal Tables
+						li
+							a(href='pages/tables/jquery-datatable.html') Jquery Datatables
+						li
+							a(href='pages/tables/editable-table.html') Editable Tables
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons perm_media
+						span Medias
+					ul.ml-menu
+						li
+							a(href='pages/medias/image-gallery.html') Image Gallery
+						li
+							a(href='pages/medias/carousel.html') Carousel
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons pie_chart
+						span Charts
+					ul.ml-menu
+						li
+							a(href='pages/charts/morris.html') Morris
+						li
+							a(href='pages/charts/flot.html') Flot
+						li
+							a(href='pages/charts/chartjs.html') ChartJS
+						li
+							a(href='pages/charts/sparkline.html') Sparkline
+						li
+							a(href='pages/charts/jquery-knob.html') Jquery Knob
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons content_copy
+						span Example Pages
+					ul.ml-menu
+						li
+							a(href='pages/examples/sign-in.html') Sign In
+						li
+							a(href='pages/examples/sign-up.html') Sign Up
+						li
+							a(href='pages/examples/forgot-password.html') Forgot Password
+						li
+							a(href='pages/examples/blank.html') Blank Page
+						li
+							a(href='pages/examples/404.html') 404 - Not Found
+						li
+							a(href='pages/examples/500.html') 500 - Server Error
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons map
+						span Maps
+					ul.ml-menu
+						li
+							a(href='pages/maps/google.html') Google Map
+						li
+							a(href='pages/maps/yandex.html') YandexMap
+						li
+							a(href='pages/maps/jvectormap.html') jVectorMap
+				li
+					a.menu-toggle(href='javascript:void(0);')
+						i.material-icons trending_down
+						span Multi Level Menu
+					ul.ml-menu
+						li
+							a(href='javascript:void(0);')
+								span Menu Item
+						li
+							a(href='javascript:void(0);')
+								span Menu Item - 2
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								span Level - 2
+							ul.ml-menu
+								li
+									a(href='javascript:void(0);')
+										span Menu Item
+								li
+									a.menu-toggle(href='javascript:void(0);')
+										span Level - 3
+									ul.ml-menu
+										li
+											a(href='javascript:void(0);')
+												span Level - 4
+				li
+					a(href='pages/changelogs.html')
+						i.material-icons update
+						span Changelogs
+				li.header LABELS
+				li
+					a(href='javascript:void(0);')
+						i.material-icons.col-red donut_large
+						span Important
+				li
+					a(href='javascript:void(0);')
+						i.material-icons.col-amber donut_large
+						span Warning
+				li
+					a(href='javascript:void(0);')
+						i.material-icons.col-light-blue donut_large
+						span Information
+		// #Menu
+		// Footer
+		.legal
+			.copyright
+				| © 2016 - 2017 
+				a(href='javascript:void(0);') AdminBSB - Material Design
+				| .
+			.version
+				b Version: 
+				|  1.0.5
+		// #Footer
+	// #END# Left Sidebar
+	// Right Sidebar
+	aside#rightsidebar.right-sidebar
+		ul.nav.nav-tabs.tab-nav-right(role='tablist')
+			li.active(role='presentation')
+				a(href='#skins', data-toggle='tab') SKINS
+			li(role='presentation')
+				a(href='#settings', data-toggle='tab') SETTINGS
+		.tab-content
+			#skins.tab-pane.fade.in.active.in.active(role='tabpanel')
+				ul.demo-choose-skin
+					li.active(data-theme='red')
+						.red
+						span Red
+					li(data-theme='pink')
+						.pink
+						span Pink
+					li(data-theme='purple')
+						.purple
+						span Purple
+					li(data-theme='deep-purple')
+						.deep-purple
+						span Deep Purple
+					li(data-theme='indigo')
+						.indigo
+						span Indigo
+					li(data-theme='blue')
+						.blue
+						span Blue
+					li(data-theme='light-blue')
+						.light-blue
+						span Light Blue
+					li(data-theme='cyan')
+						.cyan
+						span Cyan
+					li(data-theme='teal')
+						.teal
+						span Teal
+					li(data-theme='green')
+						.green
+						span Green
+					li(data-theme='light-green')
+						.light-green
+						span Light Green
+					li(data-theme='lime')
+						.lime
+						span Lime
+					li(data-theme='yellow')
+						.yellow
+						span Yellow
+					li(data-theme='amber')
+						.amber
+						span Amber
+					li(data-theme='orange')
+						.orange
+						span Orange
+					li(data-theme='deep-orange')
+						.deep-orange
+						span Deep Orange
+					li(data-theme='brown')
+						.brown
+						span Brown
+					li(data-theme='grey')
+						.grey
+						span Grey
+					li(data-theme='blue-grey')
+						.blue-grey
+						span Blue Grey
+					li(data-theme='black')
+						.black
+						span Black
+			#settings.tab-pane.fade(role='tabpanel')
+				.demo-settings
+					p GENERAL SETTINGS
+					ul.setting-list
+						li
+							span Report Panel Usage
+							.switch
+								label
+									input(type='checkbox', checked='')
+									span.lever
+						li
+							span Email Redirect
+							.switch
+								label
+									input(type='checkbox')
+									span.lever
+					p SYSTEM SETTINGS
+					ul.setting-list
+						li
+							span Notifications
+							.switch
+								label
+									input(type='checkbox', checked='')
+									span.lever
+						li
+							span Auto Updates
+							.switch
+								label
+									input(type='checkbox', checked='')
+									span.lever
+					p ACCOUNT SETTINGS
+					ul.setting-list
+						li
+							span Offline
+							.switch
+								label
+									input(type='checkbox')
+									span.lever
+						li
+							span Location Permission
+							.switch
+								label
+									input(type='checkbox', checked='')
+									span.lever
+	// #END# Right Sidebar
