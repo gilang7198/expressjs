@@ -63,18 +63,15 @@ block content
 				.col-lg-12.col-md-12.col-sm-12.col-xs-12
 					.card
 						.header
-							h2 HORIZONTAL LAYOUT
+							h2 Add Customers
 							ul.header-dropdown.m-r--5
 								li.dropdown
 									a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
 										i.material-icons more_vert
 									ul.dropdown-menu.pull-right
 										li
-											a(href='javascript:void(0);') Action
-										li
-											a(href='javascript:void(0);') Another action
-										li
-											a(href='javascript:void(0);') Something else here
+											a(href='/customers') Back
+												i.material-icons arrow_back
 						.body
 							form.form-horizontal(role='form',method='post', action='/customers/add')
 								if (messages.msg_error)  
@@ -110,6 +107,4 @@ block content
 								.row.clearfix
 									.col-lg-offset-2.col-md-offset-2.col-sm-offset-4.col-xs-offset-5
 										button.btn.btn-primary.m-t-15.waves-effect(type='submit') Submit
-										a(href='/cutomers')
-											button.btn.btn-primary.m-t-15.waves-effect(type='button') Back
 			// #END# Horizontal Layout

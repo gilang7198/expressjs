@@ -81,11 +81,8 @@ block content
 										i.material-icons more_vert
 									ul.dropdown-menu.pull-right
 										li
-											a(href='javascript:void(0);') Action
-										li
-											a(href='javascript:void(0);') Another action
-										li
-											a(href='javascript:void(0);') Something else here
+											a(href='/customers') Back
+												i.material-icons arrow_back
 						.body
 							form.form-horizontal(role='form',method='post', action='/customers/edit/#{(id==undefined) ? data.id : id}')
 								if (messages.msg_error)  
@@ -122,5 +119,3 @@ block content
 									.col-lg-offset-2.col-md-offset-2.col-sm-offset-4.col-xs-offset-5
 										input(type="hidden",name="_method", value="PUT")
 										button.btn.btn-primary.m-t-15.waves-effect(type='submit') Edit
-										a(href='/customers')
-											button.btn.btn-primary.m-t-15.waves-effect(type='button') Back
