@@ -1,8 +1,23 @@
 footer.main-footer
-	.pull-right.hidden-xs 
-		|  <b>Version</b> 2.3.7
-	strong 
-		| Copyright &copy; 2016 
-		a(href="#") >Almsaeed Studio 
-	| All rights reserved.
-.control-sidebar-bg
+	// Page Loader
+	.page-loader-wrapper
+		.loader
+			.preloader
+				.spinner-layer.pl-red
+					.circle-clipper.left
+						.circle
+					.circle-clipper.right
+						.circle
+			p Please Wait
+	// #END# Page Loader
+	// Overlay For Sidebars
+	.overlay
+	// #END# Overlay For Sidebars
+	// Search Bar
+	.search-bar
+		.search-icon
+			i.material-icons search
+		input(type='text', placeholder='START TYPING...')
+		.close-search
+			i.material-icons close
+	// #END# Search Bar
