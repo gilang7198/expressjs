@@ -99,7 +99,8 @@ router.put('/edit/(:id)',authentication_mdl.is_login, function(req,res,next){
 					});
 				}else{
 					req.flash('msg_info', 'Update customer success'); 
-					res.redirect('/customers/edit/'+req.params.id);
+					/* res.redirect('/customers/edit/' +req.params.id); */
+					res.redirect('/customers'); //redirect ke customers
 				}		
 			});
 		});
